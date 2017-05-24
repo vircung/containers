@@ -7,3 +7,4 @@ services:
       - '$IRC_PORT:6667'
     volumes:
       - '$VOLUMES_HOME/znc:/znc-data'
+    restart: always
