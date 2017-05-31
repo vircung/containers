@@ -8,3 +8,11 @@ services:
     volumes:
       - '$VOLUMES_HOME/znc:/znc-data'
     restart: always
+
+  ghost:
+    image: 'ghost:alpine'
+    ports:
+      - '80:2368'
+    volumes:
+      - '$VOLUMES_HOME/ghost:/var/lib/ghost'
+    restart: always

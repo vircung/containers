@@ -1,2 +1,4 @@
 # Ignore env variables configuration
 .env
+ghost/
+znc/
