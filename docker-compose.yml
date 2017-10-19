@@ -1,4 +1,4 @@
-version: '2'
+version: '3.1'
 
 services:
   znc:
@@ -7,7 +7,7 @@ services:
       - '$IRC_PORT:6667'
     volumes:
       - '$VOLUMES_HOME/znc:/znc-data'
-    restart: always
+    restart: unless-stopped
 
   ghost:
     image: 'ghost:alpine'
@@ -15,4 +15,4 @@ services:
       - '80:2368'
     volumes:
       - '$VOLUMES_HOME/ghost:/var/lib/ghost'
-    restart: always
+    restart: unless-stopped
