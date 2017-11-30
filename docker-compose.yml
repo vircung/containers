@@ -16,3 +16,11 @@ services:
     volumes:
       - '$VOLUMES_HOME/ghost:/var/lib/ghost'
     restart: unless-stopped
+
+  postgres:
+    image: 'postgres:alpine'
+    ports:
+      - '5432:5432'
+    volumes:
+      - '$VOLUMES_HOME/postgres:/var/lib/postgresql'
+    restart: unless-stopped
