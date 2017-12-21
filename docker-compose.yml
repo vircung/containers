@@ -24,3 +24,10 @@ services:
     volumes:
       - '$VOLUMES_HOME/postgres:/var/lib/postgresql'
     restart: unless-stopped
+
+  nginx:
+    image: 'nginx:alpine'
+    ports:
+      - '80:80'
+    volumes:
+      - '$VOLUMES_HOME/nginx:/etc/nginx/conf.d/'

@@ -2,3 +2,5 @@
 .env
 ghost/
 znc/
+postgres/
+nginx/
